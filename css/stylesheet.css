@@ -28,7 +28,7 @@ margin: 0 auto;
 #header {
 width:960px;
 height:146px;
-background:url(../images/header.jpg) 0 0 no-repeat;	
+background:url(../images/header.jpg) 0 0 no-repeat;
 }
 
 #header blockquote {
@@ -46,11 +46,11 @@ top: 10px;
 width:960px;
 height:39px;
 font-family:Georgia, "Times New Roman", Times, serif;
-text-transform:uppercase; 
-font-size:0.9em; 
+text-transform:uppercase;
+font-size:0.9em;
 line-height: 1.4em;
 display:inline;
-letter-spacing:0.1em; 
+letter-spacing:0.1em;
 }
 
 #menu ul {
@@ -69,7 +69,7 @@ background-color:#664323;
 
 #menu a {
 color:#fff;
-text-decoration:none; 
+text-decoration:none;
 position:relative; top:6px;
 }
 
@@ -92,7 +92,7 @@ height:auto;
 padding:0 1em;
 }
 
-#content h3{ 
+#content h3{
 font-family:Georgia, "Times New Roman", Times, serif;
 font-size:1.4em;
 font-style:italic;
@@ -104,38 +104,38 @@ padding:1em 0.6em 0.2em 0.6em;
 
 #copy{
 width: 58em;
-float:left; 
-font-family:Georgia, "Times New Roman", Times, serif; 
-font-size:0.8em; 
+float:left;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:0.8em;
 line-height:1.75em;
 color:#664323;
 }
 
 #copy ul {
-	position:relative;
-	list-style-type:none;
-	width: 100%;
-	padding:0;
+  position:relative;
+  list-style-type:none;
+  width: 100%;
+  padding:0;
 }
 
 #copy ul li ul li{
-	list-style-type:disc;
-	width: 95%;
-	margin:0 1em;
+  list-style-type:disc;
+  width: 95%;
+  margin:0 1em;
 }
 
 #copy li {
-	float:left;
-	width: 45%;
-	height:auto;
-	margin:2px;
-	padding:0 1em;
+  float:left;
+  width: 45%;
+  height:auto;
+  margin:2px;
+  padding:0 1em;
 }
 
-#copy li img{ 
-	float:left;
-	margin:0 5em 2em 0em;
-	border:solid 3px #fff;
+#copy li img{
+  float:left;
+  margin:0 5em 2em 0em;
+  border:solid 3px #fff;
 }
 
 #copy a{color:#69744e;
@@ -163,7 +163,7 @@ bottom: .75em;
 }
 
 p {
-padding: 0.5em 0; 
+padding: 0.5em 0;
 text-align:justify;
 }
 
@@ -186,12 +186,12 @@ line-height:1.5em;
 }
 
 .subtitle{
-text-transform:uppercase; 
+text-transform:uppercase;
 font-weight:bold;
 }
 
 .subtitledate{
-text-transform:none; 
+text-transform:none;
 font-style:italic;
 font-weight:normal;
 
@@ -203,7 +203,7 @@ color: #fff;
 }
 
 #submenu, #cleaner {
-/*background:#879564;*/	
+/*background:#879564;*/
 display:block;
 height: auto;
 width: 180px;
@@ -211,13 +211,13 @@ padding: 2em 0 1em 0;
 line-height:1.4em;
 }
 
-#submenu ul{ 
+#submenu ul{
 list-style-type:none;
 text-align:left;
 padding: 1em 1.75em 1em 1.75em;
 }
 
-#submenu li{ 
+#submenu li{
 padding: 0.2em 0 0.5em 0;
 }
 
@@ -230,11 +230,11 @@ text-decoration:none;
 font-style:italic;
 }
 
-#submenu a:hover { 
+#submenu a:hover {
 color:#f3ec9b;
 }
 
-#quote { 
+#quote {
 background-color:#69744e;
 display:block;
 border-top: 3px solid #fff;
@@ -244,7 +244,7 @@ width: 180px;
 padding: 1.8em 0;
 }
 
-#quote blockquote { 
+#quote blockquote {
 padding: 0 1em;
 color:#fff;
 font-family:Georgia, "Times New Roman", Times, serif;
@@ -261,7 +261,7 @@ height: auto;
 
 .cleaner{ clear: both; }
 
-#footer { 
+#footer {
 position: relative;
 background: url(../images/footer.jpg) no-repeat center;
 height:69px;

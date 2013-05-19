@@ -12,9 +12,9 @@
 * html .galleria li div span{width:400px} /* MSIE bug */
 
 #portfolio {
-float:left; 
-font-family:Georgia, "Times New Roman", Times, serif; 
-font-size:0.8em; 
+float:left;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:0.8em;
 line-height:1.75em;
 color:#664323;
 padding-left:15px;
