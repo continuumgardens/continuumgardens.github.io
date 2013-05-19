@@ -3,7 +3,7 @@
   <head>
     <meta name="google-site-verification" content="oS_WBb5MBYKsc6EGtFyicLNIkRlCRizb8PD7mnUqYso" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Continuum Gardens</title>
+    <title>{{ site.bizname }} - {{ page.title }}</title>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css" media="all" />
     <link rel="Shortcut Icon" href="images/cg.ico" />
   </head>
@@ -11,24 +11,29 @@
     <div id="background">
       <div id="wrapper">
         <div id="header"><a id="logolink" href="index.html">
-            <img id="logo" src="images/logo.png" alt="Continuum Gardens" /></a>
+            <img id="logo" src="images/logo.png" alt="{{ site.bizname }}" /></a>
           <blockquote>&ldquo;Creating unique and vibrant gardens for our clients to delight in the diversity and beauty of nature.&rdquo;</blockquote>
         </div><!-- end header -->
 
-        {{menu}}
+        {% include menu.html}}
 
         <div id="content">
-          {{content}}
+          {{ content }}
         </div><!-- end content -->
         <div id="wrapper-left">
-          {{submenu}}
-          {{quote}}
-        </div>
+          {% submenu}
+          {% quote}
+        </div><!-- end wrapper-left -->
         <div class="cleaner"></div>
-      </div>
-    </div>
+      </div><!-- end wrapper -->
+    </div><!-- end background -->
     <div id="footer">
-      <span id="first"><p>Phone: 206.324.1802</p></span><span id="photos"><p>&copy;2010 Continuum Gardens. All photography by <a href="http://www.erikalangley.com/" target="_blank">Erika Langley</a></p></span>
-    </div>
+      <span id="first"><p>Phone: {{ site.phonenum }}</p></span>
+      <span id="photos"><p>&copy;{{ site.copyright }} {{ site.bizname }}.
+          All photography by
+          <a href="http://www.erikalangley.com/"
+             target="_blank">Erika Langley</a></p>
+      </span>
+    </div><!-- end footer -->
   </body>
 </html>
