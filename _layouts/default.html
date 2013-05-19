@@ -25,12 +25,7 @@
             our clients to delight in the diversity and beauty of
             nature.&rdquo;</blockquote>
         </div><!-- end header -->
-        {% if page.front == true %}
-        {% include slider-main.html %}
-        {% endif %}
-
-        {% include menu.html %}
-
+        {% include menu.html %}{% if page.front == true %}{% include slider-main.html %}{% endif %}
         <div id="content">
           <h3>
             {% if page.heading != '' %}
