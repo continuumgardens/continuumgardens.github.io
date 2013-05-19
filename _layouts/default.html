@@ -17,15 +17,17 @@
   <body>
     <div id="background">
       <div id="wrapper">
-        <div id="header"><a id="logolink" href="index.html">
-            <img id="logo" src="images/logo.png" alt="{{ site.bizname }}" /></a>
+        <div id="header">
+          <a id="logolink" href="index.html">
+            <img id="logo" src="images/logo.png" alt="{{ site.bizname }}" />
+          </a>
           <blockquote>&ldquo;Creating unique and vibrant gardens for
             our clients to delight in the diversity and beauty of
             nature.&rdquo;</blockquote>
-          {% if page.front == true %}
-          {% include slider-main.html %}
-          {% endif %}
         </div><!-- end header -->
+        {% if page.front == true %}
+        {% include slider-main.html %}
+        {% endif %}
 
         {% include menu.html %}
 
