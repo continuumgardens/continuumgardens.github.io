@@ -4,7 +4,12 @@
     <meta name="google-site-verification" content="oS_WBb5MBYKsc6EGtFyicLNIkRlCRizb8PD7mnUqYso" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{{ site.bizname }} - {{ page.title }}</title>
-    <link type="text/css" rel="stylesheet" href="css/stylesheet.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"
+          media="all" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    {% if page.front == true %}
+    {% include slider-head.html %}
+    {% endif %}
     <link rel="Shortcut Icon" href="images/cg.ico" />
   </head>
   <body>
@@ -12,7 +17,12 @@
       <div id="wrapper">
         <div id="header"><a id="logolink" href="index.html">
             <img id="logo" src="images/logo.png" alt="{{ site.bizname }}" /></a>
-          <blockquote>&ldquo;Creating unique and vibrant gardens for our clients to delight in the diversity and beauty of nature.&rdquo;</blockquote>
+          <blockquote>&ldquo;Creating unique and vibrant gardens for
+            our clients to delight in the diversity and beauty of
+            nature.&rdquo;</blockquote>
+          {% if page.front == true %}
+          {% include slider-main.html %}
+          {% endif %}
         </div><!-- end header -->
 
         {% include menu.html %}
@@ -37,5 +47,8 @@
              target="_blank">Erika Langley</a></p>
       </span>
     </div><!-- end footer -->
+    {% if page.front == true %}
+    {% include slide-foot.html %}
+    {% endif %}
   </body>
 </html>
