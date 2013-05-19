@@ -67,12 +67,12 @@ margin:-1px 0 0;
 }
 
 div#slide-holder{
+top:35px;
 width:960px;
 height:338px;
 position:relative;
 }
 div#slide-holder div#slide-runner{
-top:35px;
 left:0px;
 width:960px;
 height:300px;
