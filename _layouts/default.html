@@ -30,7 +30,16 @@
         {% include menu.html %}
 
         <div id="content">
+          <h3>
+            {% if page.heading != '' %}
+            {{ page.heading }}
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+          </h3>
+          <div id="copy">
           {{ content }}
+        </div><!-- end copy -->
         </div><!-- end content -->
         <div id="wrapper-left">
           {% comment %}
