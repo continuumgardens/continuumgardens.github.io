@@ -15,14 +15,16 @@
           <blockquote>&ldquo;Creating unique and vibrant gardens for our clients to delight in the diversity and beauty of nature.&rdquo;</blockquote>
         </div><!-- end header -->
 
-        {% include menu.html}}
+        {% include menu.html %}
 
         <div id="content">
           {{ content }}
         </div><!-- end content -->
         <div id="wrapper-left">
-          {% submenu}
-          {% quote}
+          {% comment %}
+          submenu
+          quote
+          {% endcomment %}
         </div><!-- end wrapper-left -->
         <div class="cleaner"></div>
       </div><!-- end wrapper -->
