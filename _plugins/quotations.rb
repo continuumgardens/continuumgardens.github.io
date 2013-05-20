@@ -26,15 +26,31 @@ module Jekyll
       files.each do |fname|
         File.open(File.join(tdir, fname)) do |file|
           content = file.read.chomp
-          @@quotelist << [fname, content]
+          @@quotelist << [File.basename(fname, ".txt"), content]
           @@randomquotelist << content
         end
       end
+      p @@quotelist
     end
 
     def randomquote(site)
-      ""
+      if @@randomquotelist
+        if @@randomquotelist.size == 0
+          refill_quotes
+        end
+        idx = rand(@@randomquotelist.size)
+        quote = @@randomquotelist[idx]
+        @@randomquotelist.delete_at(idx)
+        quote
+      end
     end
+
+    def refill_quotes
+      @@quotelist.each do |pair|
+        @@randomquotelist << pair[1]
+      end
+    end
+
   end
 end
 
