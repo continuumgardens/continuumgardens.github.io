@@ -11,7 +11,7 @@ module Jekyll
   end
 
   class PortfolioMainPage < Page
-    def initialize(site, base, dir, sections)
+    def initialize(site, base, dir, pages)
       @site = site
       @base = base
       @dir = dir
@@ -22,18 +22,18 @@ module Jekyll
       self.data['layout'] = "default"
 
       content = '<ul>'
-      sections.sort.each do |entry|
+      pages.sort.each do |entry|
         content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{entry.gsub('_', ' ').capitalize}</a></li> "
       end
       content << "</ul>"
       self.content = content
-      self.submenu = Portfolio::submenu(sections)
+      self.submenu = Portfolio::submenu(pages)
     end
 
   end
 
   class PortfolioPage < Page
-    def initialize(site, base, dir, layout, dirs, section)
+    def initialize(site, base, dir, layout, pages, section)
       @site = site
       @base = base
       @dir = dir
@@ -44,7 +44,7 @@ module Jekyll
       self.data['title'] = section.capitalize
       self.data['layout'] = "portfolio"
 
-      self.submenu = Portfolio::submenu(dirs)
+      self.submenu = Portfolio::submenu(pages)
 
       excludes = [".", "..", "main.jpg"]
       imgs = Dir.entries(dir).sort.select do |entry|
