@@ -14,7 +14,7 @@ module Jekyll
 
       content = '<ul>'
       sections.sort.each do |entry|
-        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{entry.capitalize}</a></li> "
+        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{entry.gsub('_', ' ').capitalize}</a></li> "
       end
       content << "</ul>"
       self.content = content
