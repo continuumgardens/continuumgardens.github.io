@@ -33,8 +33,13 @@
         </div><!-- end copy -->
         </div><!-- end content -->
         <div id="wrapper-left">
+          {% if page.submenu != '' %}
+          {{ page.submenu }}
+          {% else %}
+          submenu_tag
+          {% endif %}
           {% comment %}
-          submenu
+
           quote
           {% endcomment %}
         </div><!-- end wrapper-left -->
