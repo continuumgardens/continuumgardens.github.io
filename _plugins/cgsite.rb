@@ -1,6 +1,6 @@
 
 module Jekyll
-  class Portfolio
+  class CGSite
     def self.submenu(base, entries, suffix="")
       submenu = '<div id="submenu"><ul>'
       entries.each do |entry|
@@ -9,7 +9,7 @@ module Jekyll
           text = entry[1]
         else
           link = entry+suffix
-          text = Portfolio::titlize(entry)
+          text = CGSite::titlize(entry)
         end
         submenu << "<li><a href=\"/#{base}/#{link}\">#{text}</a></li>"
       end
