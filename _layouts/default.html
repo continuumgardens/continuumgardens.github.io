@@ -27,13 +27,7 @@
         </div><!-- end header -->
         {% include menu.html %}{% if page.front == true %}{% include slider-main.html %}{% endif %}
         <div id="content">
-          <h3>
-            {% if page.heading != '' %}
-            {{ page.heading }}
-            {% else %}
-            {{ page.title }}
-            {% endif %}
-          </h3>
+          <h3>{% if page.heading != '' %}{{ page.heading }}{% else %}{{ page.title }}{% endif %}</h3>
           <div id="copy">
           {{ content }}
         </div><!-- end copy -->
