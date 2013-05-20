@@ -2,7 +2,7 @@
 module Jekyll
   class Portfolio
     def self.submenu(base, subdirs)
-      submenu = '<div id="wrapper-left"><div id="submenu"><ul>'
+      submenu = '<div id="submenu"><ul>'
       subdirs.each do |entry|
         submenu << "<li><a href=\"/#{base}/#{entry}/index.html\">#{Portfolio::titlize(entry)}</a></li>"
       end
