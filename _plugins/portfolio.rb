@@ -44,7 +44,7 @@ module Jekyll
       self.data['title'] = section.capitalize
       self.data['layout'] = "portfolio"
 
-      self.data['submenu'] = Portfolio::submenu(dir, pages)
+      self.data['submenu'] = Portfolio::submenu(File.dirname(dir), pages)
 
       excludes = [".", "..", "main.jpg"]
       imgs = Dir.entries(dir).sort.select do |entry|
