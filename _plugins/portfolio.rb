@@ -6,12 +6,18 @@ module Jekyll
       @site = site
       @base = base
       @dir = dir
-      @name = 'index.md'
+      @name = 'index.html'
       self.process(@name)
       self.data = {}
       self.data['title'] = "Portfolio"
       self.data['layout'] = "default"
-      self.content = "monkeysticks"
+
+      content = '<ul>'
+      sections.sort.each do |entry|
+        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{entry.capitalize}</a></li> "
+      end
+      content << "</ul>"
+      self.content = content
     end
 
   end
