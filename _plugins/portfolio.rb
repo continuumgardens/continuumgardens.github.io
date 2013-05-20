@@ -21,13 +21,22 @@ module Jekyll
       @site = site
       @base = base
       @dir = dir
-      @name = 'index.md'
+      @name = 'index.html'
 
       self.process(@name)
       self.data = {}
       self.data['title'] = section.capitalize
-      self.data['layout'] = portfolio
-      content = ""
+      self.data['layout'] = "portfolio"
+
+      excludes = [".", "..", "main.jpg"]
+      imgs = Dir.entries(dir).sort.select { |entry| !excludes.include? entry }
+
+      content = '<li class="active">'
+      content << '<img src="main.jpg" title="" alt="" /></li>'
+      imgs.each do |img|
+        content << "<li><img src=\"#{img}\" title=\"\" alt=\"\" /></li>"
+      end
+      self.content = content
     end
   end
 
