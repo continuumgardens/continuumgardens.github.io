@@ -27,12 +27,13 @@ module Jekyll
       end
       content << "</ul>"
       self.content = content
+      self.submenu = Portfolio::submenu(sections)
     end
 
   end
 
   class PortfolioPage < Page
-    def initialize(site, base, dir, layout, section)
+    def initialize(site, base, dir, layout, dirs, section)
       @site = site
       @base = base
       @dir = dir
@@ -42,6 +43,8 @@ module Jekyll
       self.data = {}
       self.data['title'] = section.capitalize
       self.data['layout'] = "portfolio"
+
+      self.submenu = Portfolio::submenu(dirs)
 
       excludes = [".", "..", "main.jpg"]
       imgs = Dir.entries(dir).sort.select do |entry|
@@ -81,7 +84,8 @@ module Jekyll
         srcdir = File.join(dir,section)
 
         site.pages << PortfolioPage.new(site, site.source,
-                                        srcdir, layout, section)
+                                        srcdir, layout,
+                                        dirs, section)
       end
       site.pages << PortfolioMainPage.new(site, site.source,
                                           dir, dirs)
