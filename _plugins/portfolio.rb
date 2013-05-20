@@ -1,10 +1,10 @@
 
 module Jekyll
   class Portfolio
-    def self.submenu(subdirs)
+    def self.submenu(base, subdirs)
       submenu = '<div id="wrapper-left"><div id="submenu"><ul>'
       subdirs.each do |entry|
-        submenu << "<li><a href=\"#{entry}/index.html\">#{entry.gsub('_', ' ').capitalize}</a></li>"
+        submenu << "<li><a href=\"/#{base}/#{entry}/index.html\">#{entry.gsub('_', ' ').capitalize}</a></li>"
       end
       submenu << '</ul></div>'
     end
@@ -20,6 +20,7 @@ module Jekyll
       self.data = {}
       self.data['title'] = "Portfolio"
       self.data['layout'] = "default"
+      self.data['submenu'] = Portfolio::submenu(dir, pages)
 
       content = '<ul>'
       pages.sort.each do |entry|
@@ -27,7 +28,6 @@ module Jekyll
       end
       content << "</ul>"
       self.content = content
-      self.submenu = Portfolio::submenu(pages)
     end
 
   end
@@ -44,7 +44,7 @@ module Jekyll
       self.data['title'] = section.capitalize
       self.data['layout'] = "portfolio"
 
-      self.submenu = Portfolio::submenu(pages)
+      self.data['submenu'] = Portfolio::submenu(dir, pages)
 
       excludes = [".", "..", "main.jpg"]
       imgs = Dir.entries(dir).sort.select do |entry|
