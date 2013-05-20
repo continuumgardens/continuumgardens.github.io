@@ -6,11 +6,12 @@ module Jekyll
       @site = site
       @base = base
       @dir = dir
-      @name = 'index.html'
+      @name = 'index.md'
       self.process(@name)
-      self.read_yaml(File.join(base, "_layouts"), "default.html")
+      self.data = {}
       self.data['title'] = "Portfolio"
-      self.data['content'] = "monkeysticks"
+      self.data['layout'] = "default"
+      self.content = "monkeysticks"
     end
 
   end
@@ -20,12 +21,13 @@ module Jekyll
       @site = site
       @base = base
       @dir = dir
-      @name = 'index.html'
+      @name = 'index.md'
 
       self.process(@name)
-      self.read_yaml(File.join(base, "_layouts"), "#{layout}.html")
+      self.data = {}
       self.data['title'] = section.capitalize
-      self.data['portfolio'] = "true"
+      self.data['layout'] = portfolio
+      content = ""
     end
   end
 
