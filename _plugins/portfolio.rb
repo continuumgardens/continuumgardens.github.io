@@ -4,9 +4,16 @@ module Jekyll
     def self.submenu(base, subdirs)
       submenu = '<div id="wrapper-left"><div id="submenu"><ul>'
       subdirs.each do |entry|
-        submenu << "<li><a href=\"/#{base}/#{entry}/index.html\">#{entry.gsub('_', ' ').capitalize}</a></li>"
+        submenu << "<li><a href=\"/#{base}/#{entry}/index.html\">#{Portfolio::titlize(entry)}</a></li>"
       end
       submenu << '</ul></div>'
+    end
+
+    def self.titlize(str)
+      nocap = ['and','of']
+      str.gsub('_', ' ').gsub(/\b.+?\b/) do |s|
+        nocap.include?(s) ? s : s.capitalize
+      end
     end
   end
 
@@ -24,7 +31,7 @@ module Jekyll
 
       content = '<ul>'
       pages.sort.each do |entry|
-        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{entry.gsub('_', ' ').capitalize}</a></li> "
+        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{Portfolio::titlize(entry)}</a></li> "
       end
       content << "</ul>"
       self.content = content
@@ -41,7 +48,7 @@ module Jekyll
 
       self.process(@name)
       self.data = {}
-      self.data['title'] = section.capitalize
+      self.data['title'] = Portfolio::titlize(section)
       self.data['layout'] = "portfolio"
 
       self.data['submenu'] = Portfolio::submenu(File.dirname(dir), pages)
