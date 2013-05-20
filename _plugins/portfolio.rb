@@ -35,7 +35,9 @@ module Jekyll
       self.data['layout'] = "portfolio"
 
       excludes = [".", "..", "main.jpg"]
-      imgs = Dir.entries(dir).sort.select { |entry| !excludes.include? entry }
+      imgs = Dir.entries(dir).sort.select do |entry|
+        (!File.directory?(File.join(dir,entry)) && !excludes.include?(entry))
+      end
 
       content = '<li class="active">'
       content << '<img src="main.jpg" title="" alt="" /></li>'
@@ -60,17 +62,20 @@ module Jekyll
 
       dir = site.config['portfolio_dir'] || 'portfolio'
 
+      excludes = [".", ".."]
+      dirs = Dir.entries(dir).sort.select do |entry|
+        (File.directory?(File.join(dir,entry)) && !excludes.include?(entry))
+      end
+
       portfolio_pages = []
-      Dir.open(dir).each do |section|
+      dirs.each do |section|
         srcdir = File.join(dir,section)
-        next unless (File.directory?(srcdir) &&
-                     '.' != section && '..' != section)
-        portfolio_pages << section
+
         site.pages << PortfolioPage.new(site, site.source,
                                         srcdir, layout, section)
       end
       site.pages << PortfolioMainPage.new(site, site.source,
-                                          dir, portfolio_pages)
+                                          dir, dirs)
     end
   end
 end
