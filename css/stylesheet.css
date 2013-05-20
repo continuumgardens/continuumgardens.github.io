@@ -322,3 +322,8 @@ display: inline;
 line-height: 100%;
 text-align: left;
 }
+
+img.thumb {
+    width: auto;
+    height: 120px;
+}

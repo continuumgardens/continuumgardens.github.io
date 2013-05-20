@@ -31,7 +31,7 @@ module Jekyll
 
       content = '<ul>'
       pages.sort.each do |entry|
-        content << "<li><a href=\"#{entry}\"><img src=\"#{entry}/main-thumb.jpg\" />#{Portfolio::titlize(entry)}</a></li> "
+        content << "<li><a href=\"#{entry}\"><img class=\"thumb\" src=\"#{entry}/main.jpg\" />#{Portfolio::titlize(entry)}</a></li> "
       end
       content << "</ul>"
       self.content = content
