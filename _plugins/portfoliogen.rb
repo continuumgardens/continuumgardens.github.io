@@ -10,7 +10,7 @@ module Jekyll
       self.data = {}
       self.data['title'] = "Portfolio"
       self.data['layout'] = "default"
-      self.data['submenu'] = Portfolio::submenu(dir, pages)
+      self.data['submenu'] = Portfolio::submenu(dir, pages, "/index.html")
 
       content = '<ul>'
       pages.sort.each do |entry|
@@ -34,7 +34,8 @@ module Jekyll
       self.data['title'] = Portfolio::titlize(section)
       self.data['layout'] = "portfolio"
 
-      self.data['submenu'] = Portfolio::submenu(File.dirname(dir), pages)
+      self.data['submenu'] = Portfolio::submenu(File.dirname(dir),
+                                                pages, "/index.html")
 
       excludes = [".", "..", "main.jpg"]
       imgs = Dir.entries(dir).sort.select do |entry|
