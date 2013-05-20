@@ -1,5 +1,14 @@
 
 module Jekyll
+  class Portfolio
+    def self.submenu(subdirs)
+      submenu = '<div id="wrapper-left"><div id="submenu"><ul>'
+      subdirs.each do |entry|
+        submenu << "<li><a href=\"#{entry}/index.html\">#{entry.gsub('_', ' ').capitalize}</a></li>"
+      end
+      submenu << '</ul></div>'
+    end
+  end
 
   class PortfolioMainPage < Page
     def initialize(site, base, dir, sections)
