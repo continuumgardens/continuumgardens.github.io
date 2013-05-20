@@ -6,6 +6,13 @@ module Jekyll
     end
 
     def render(context)
+      "<div id=\"quote\"><blockquote>&ldquo;" +
+        randomquote(context.registers[:site]) +
+        "&rdquo;</blockquote></div>"
+    end
+
+    def randomquote(site)
+      ""
     end
   end
 end
