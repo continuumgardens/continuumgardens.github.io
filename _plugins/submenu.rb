@@ -14,21 +14,29 @@ module Jekyll
       # Prepend a slash for ease of comparison with Page.dir
       subpath = "/"+File.dirname(filename)
 
-      submenu = ""
+      submenutext = ""
       if (subpath != "/.")
 
         # Filter pages by whether they're in the same subdirectory
         pages = site.pages.select do |item|
           (item.dir == subpath)
         end
-        p pages[0].data
         # Need to pull out the index.html page first
+        index = nil
+        submenu = []
         pages.each do |page|
           # For each page, pull out it's title, and use it in the submenu
-          subpath << "#{page.data['title']}"
+          pair = [page.name, page.data['title']]
+          if page.name == "index.html"
+            index = pair
+          else
+            submenu << pair
+          end
         end
+        submenu.insert(0, index)
+        submenutext = CGSite::submenu(subpath[1..-1], submenu)
       end
-      return submenu
+      return submenutext
     end
   end
 end
