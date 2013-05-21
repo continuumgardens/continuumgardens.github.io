@@ -1,16 +1,17 @@
 ---
 layout: default
 title: List of Services
+order: 2
 ---
 
-*   #### Coaching, consultation & design
+*   #### Coaching, Consultation & Design
 
     *   On-site meetings with clients to discuss design and maintenance issues
     *   Consultation and support for those who wish to plant and manage their own garden
     *   Rough sketches
     *   Detailed scale drawings
 
-    #### Site prep & hardscape installation
+    #### Site-prep & Hardscape Installation
 
     *   Demolition, grading and general site prep
     *   Drainage and irrigation systems
@@ -42,6 +43,7 @@ title: List of Services
     *   Weekly, monthly or seasonal garden care
     *   Mowing and blowing (4 cycle equipment only!)
 
-    Bids and hourly rates available upon request.
+<br>
 
+## __Bids and hourly rates available upon request.__  {.center}
 
