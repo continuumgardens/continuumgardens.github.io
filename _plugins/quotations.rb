@@ -68,7 +68,7 @@ module Jekyll
       self.data = {'title' => 'Client Testimonials',
                    'layout' => 'default'}
 
-      content = ""
+      content = "<img src=\"/images/pic02.jpg\" alt=\"\" />"
       testimonials.each do |entry|
         content << "<p>&ldquo;#{entry[1]}.&rdquo; &ndash; #{entry[0]}</p>"
       end
