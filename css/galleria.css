@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.galleria{list-style:none;width:750px;}
+.galleria li{display:block;width:80px;height:80px;overflow:hidden;float:left;margin:11px 11px 11px 0}
+.galleria li a{display:none;}
+.galleria li div{position:absolute;display:none;top:0;left:180px;}
+.galleria li div img{cursor:pointer;}
+.galleria li.active div img,.galleria li.active div{display:block;}
+.galleria li img.thumb{cursor:pointer;top:auto;left:auto;display:block;width:auto;height:auto;}
+.galleria li .caption{display:block;padding-top:.5em;}
+* html .galleria li div span{width:400px} /* MSIE bug */
+
+#portfolio {
+float:left;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:0.8em;
+line-height:1.75em;
+color:#664323;
+padding-left:15px;
+}
