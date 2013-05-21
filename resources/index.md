@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Reuse and Recycle
+order: 1
 ---
 
 ![picture 09](/images/pic09.jpg)

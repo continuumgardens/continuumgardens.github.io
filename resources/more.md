@@ -1,40 +1,41 @@
 ---
 layout: default
 title: More Resources
+order: 3
 ---
 
-*   Educational:
-    [Gaia College][8]
-    [Master Gardener Program][9]
-    [Natural Lawn & Garden Hotline][10] (206) 663-0224
+* ![picture 10](http://continuumgardens.com/images/pic10.jpg)
+* #### Educational:
+  - [Gaia College][8]
+  - [Master Gardener Program][9]
+  - [Natural Lawn & Garden Hotline][10] (206) 663-0224
 
-    Government Agencies:
-    [Pesticide Reduction Program][11] - City of Seattle
-    [Green Gardening Program][12]
-    [Reusable Building Materials Exchange][13] -
-    King County Department of Natural Resources
-    [Saving Water Partnership][14]
-    [Seattle Public Utilities Community Resource Division][15]
-    [EnviroStars Program][16]
+* #### Government Agencies:
+  - [Pesticide Reduction Program][11] - City of Seattle
+  - [Green Gardening Program][12]
+  - [Reusable Building Materials Exchange][13] -
+  - King County Department of Natural Resources
+  - [Saving Water Partnership][14]
+  - [Seattle Public Utilities Community Resource Division][15]
+  - [EnviroStars Program][16]
 
-    Organizations:
-    [American Horticultural Society][17]
-    [Center for Urban Horticulture][18]
-    [Coalition of Organic Landscapes][19]
-    [Green Meridian][20]
-    [National Gardening Association][21]
-    [Pesticide Action Network North America][22]
-    [Plant Amnesty][23]
-    [Seattle Tilth][24]
+* #### Organizations:
+  - [American Horticultural Society][17]
+  - [Center for Urban Horticulture][18]
+  - [Coalition of Organic Landscapes][19]
+  - [Green Meridian][20]
+  - [National Gardening Association][21]
+  - [Pesticide Action Network North America][22]
+  - [Plant Amnesty][23]
+  - [Seattle Tilth][24]
 
-*   ![picture 10](http://continuumgardens.com/images/pic10.jpg)
-    Informational:
-    [Internet Search Engine for Horticulture][26]
-    [NW Native Plants][27]
-    [Toxic Plants][28]
+* #### Informational:
+  - [Internet Search Engine for Horticulture][26]
+  - [NW Native Plants][27]
+  - [Toxic Plants][28]
 
-    Suppliers:
-    [Walt's Organic Fertilizer Co.][29]
+* #### Suppliers:
+  - [Walt's Organic Fertilizer Co.][29]
 
  [8]: http://www.organic-land-care.com/
  [9]: http://mastergardener.wsu.edu/

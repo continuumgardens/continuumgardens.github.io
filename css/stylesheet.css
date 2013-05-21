@@ -133,6 +133,8 @@ margin-left: 0.5em;
 
 #copy li img{
   float:left;
+  width: 100%;
+  height: auto;
   margin:0 5em 2em 0em;
   border:solid 3px #fff;
 }
