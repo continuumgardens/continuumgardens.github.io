@@ -27,14 +27,18 @@ module Jekyll
         pages.each do |page|
           # For each page, pull out it's title, and use it in the submenu
           pair = [page.name, page.data['title']]
-          if page.name == "index.html"
+          order = page.data['order']
+          if order
+            submenu.insert(order, pair)
+          elsif page.name == "index.html"
             index = pair
           else
             submenu << pair
           end
         end
         submenu.insert(0, index)
-        submenutext = CGSite::submenu(subpath[1..-1], submenu)
+
+        submenutext = CGSite::submenu(subpath[1..-1], submenu.compact)
       end
       return submenutext
     end
