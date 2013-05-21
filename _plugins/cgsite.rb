@@ -11,7 +11,8 @@ module Jekyll
           link = entry+suffix
           text = CGSite::titlize(entry)
         end
-        submenu << "<li><a href=\"/#{base}/#{link}\">#{text}</a></li>"
+        url = File.join(base,link)
+        submenu << "<li><a href=\"#{url}\">#{text}</a></li>"
       end
       submenu << '</ul></div>'
     end

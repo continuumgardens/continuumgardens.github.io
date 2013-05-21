@@ -26,7 +26,7 @@ module Jekyll
         submenu = []
         pages.each do |page|
           # For each page, pull out it's title, and use it in the submenu
-          pair = [page.name, page.data['title']]
+          pair = [page.url[1..-1], page.data['title']]
           order = page.data['order']
           if order
             submenu.insert(order, pair)
@@ -38,7 +38,7 @@ module Jekyll
         end
         submenu.insert(0, index)
 
-        submenutext = CGSite::submenu(subpath[1..-1], submenu.compact)
+        submenutext = CGSite::submenu("", submenu.compact)
       end
       return submenutext
     end
