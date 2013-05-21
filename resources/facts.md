@@ -4,19 +4,19 @@ title: Shocking Facts
 order: 2
 ---
 
-* #### Green America,
+* ## Green America,
        Fall 2009
 
     The EPA estimates that on average each American uses over 4 lbs. of pesticides a year... Every action counts!!
 
     There are more than 80,000 chemicals used in consumer products and manufacturing in the United States - and more than 2,000 new chemicals are introduced each year. Only about 200 have been tested for safety. The government DOES NOT REQUIRE testing or health studies for chemicals including those found in house hold cleaners, pesticides, paints and stains, skin and hair care products, and the hormones used in the meat and dairy industries.
 
-  #### Seattle Times,
+  ## Seattle Times,
        August 10th, 2001
 
     In a study examining the exposure of children to household pesticides, UW researchers have discovered garden chemicals in the urine of dozens of Seattle area preschool kids. The study showed more than half the children had been exposed to higher levels of pesticides than federal regulators considered safe.
 
-* #### Seattle Times,
+* ## Seattle Times,
        April 19th, 2002
 
     According to a Sierra Club study, 2-cycle engines dump 25-30% of their fuel unburned directly into our environment. A 2-cycle lawn mower pollutes as much as 40 new model cars.
