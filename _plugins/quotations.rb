@@ -3,19 +3,12 @@ module Jekyll
 
     @@quotelist = nil
     @@randomquotelist = nil
-    def initialize(tag_name, text, tokens)
-      super
+
+    def self.testimonials
+      @@quotelist
     end
 
-    def render(context)
-      site = context.registers[:site]
-      init_testimonials(site) unless @@quotelist
-      "<div id=\"quote\"><blockquote>&ldquo;" +
-        randomquote(site) +
-        "&rdquo;</blockquote></div>"
-    end
-
-    def init_testimonials(site)
+    def self.init_testimonials(site)
       @@quotelist = []
       @@randomquotelist = []
       tdir = File.join(site.config["source"], "_testimonials")
@@ -31,6 +24,18 @@ module Jekyll
         end
       end
       p @@quotelist
+    end
+
+    def initialize(tag_name, text, tokens)
+      super
+    end
+
+    def render(context)
+      site = context.registers[:site]
+      init_testimonials(site) unless @@quotelist
+      "<div id=\"quote\"><blockquote>&ldquo;" +
+        randomquote(site) +
+        "&rdquo;</blockquote></div>"
     end
 
     def randomquote(site)
