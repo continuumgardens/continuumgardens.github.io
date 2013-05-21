@@ -10,7 +10,8 @@ module Jekyll
       self.data = {}
       self.data['title'] = "Portfolio"
       self.data['layout'] = "default"
-      self.data['submenu'] = CGSite::submenu(dir, pages, "/index.html")
+      p dir
+      self.data['submenu'] = CGSite::submenu("/"+dir, pages, "/index.html")
 
       content = '<ul>'
       pages.sort.each do |entry|
@@ -34,7 +35,7 @@ module Jekyll
       self.data['title'] = CGSite::titlize(section)
       self.data['layout'] = "portfolio"
 
-      self.data['submenu'] = CGSite::submenu(File.dirname(dir),
+      self.data['submenu'] = CGSite::submenu("/"+File.dirname(dir),
                                              pages, "/index.html")
 
       excludes = [".", "..", "main.jpg"]
