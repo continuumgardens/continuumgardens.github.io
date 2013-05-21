@@ -20,7 +20,6 @@ background: url(../images/bg.jpg) repeat-y center;
 #wrapper {
 position:relative;
 width:960px;
-height:100%;
 padding: 0 0;
 margin: 0 auto;
 }
@@ -198,6 +197,7 @@ font-weight:normal;
 }
 
 #wrapper-left {
+padding-bottom: 1.5em;
 width:180px;
 color: #fff;
 }
@@ -239,7 +239,6 @@ background-color:#69744e;
 display:block;
 border-top: 3px solid #fff;
 border-bottom: 3px solid #fff;
-height: 100%;
 width: 180px;
 padding: 1.8em 0;
 }
