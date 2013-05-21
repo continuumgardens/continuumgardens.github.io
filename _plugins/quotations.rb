@@ -23,7 +23,6 @@ module Jekyll
           @@randomtestimonials << content
         end
       end
-      p @@testimonials
     end
 
     def initialize(tag_name, text, tokens)
@@ -57,6 +56,36 @@ module Jekyll
     end
 
   end
+
+  class TestimonialPage < Page
+    def initialize(site, base, dir, testimonials)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'testimonials.html'
+      self.process(@name)
+
+      self.data = {'title' => 'Client Testimonials',
+                   'layout' => 'default'}
+
+      content = ""
+      testimonials.each do |entry|
+        content << "<p>&ldquo;#{entry[1]}.&rdquo; &ndash; #{entry[0]}</p>"
+      end
+      self.content = content
+    end
+  end
+
+  class TestimonialGenerator < Generator
+    safe true
+
+    def generate(site)
+      Testimonials.init_testimonials(site) unless Testimonials.testimonials
+      site.pages << TestimonialPage.new(site, site.source,
+                                        "about",Testimonials.testimonials)
+    end
+  end
+
 end
 
 Liquid::Template.register_tag('testimonial', Jekyll::Testimonials)
