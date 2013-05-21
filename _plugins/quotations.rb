@@ -1,16 +1,16 @@
 module Jekyll
-  class Quotation < Liquid::Tag
+  class Testimonials < Liquid::Tag
 
-    @@quotelist = nil
-    @@randomquotelist = nil
+    @@testimonials = nil
+    @@randomtestimonials = nil
 
     def self.testimonials
-      @@quotelist
+      @@testimonials
     end
 
     def self.init_testimonials(site)
-      @@quotelist = []
-      @@randomquotelist = []
+      @@testimonials = []
+      @@randomtestimonials = []
       tdir = File.join(site.config["source"], "_testimonials")
       files = Dir::entries(tdir).select do |entry|
         (!File.directory?(File.join(tdir,entry)) && !entry.end_with?("~"))
@@ -19,11 +19,11 @@ module Jekyll
       files.each do |fname|
         File.open(File.join(tdir, fname)) do |file|
           content = file.read.chomp
-          @@quotelist << [File.basename(fname, ".txt"), content]
-          @@randomquotelist << content
+          @@testimonials << [File.basename(fname, ".txt"), content]
+          @@randomtestimonials << content
         end
       end
-      p @@quotelist
+      p @@testimonials
     end
 
     def initialize(tag_name, text, tokens)
@@ -32,31 +32,31 @@ module Jekyll
 
     def render(context)
       site = context.registers[:site]
-      init_testimonials(site) unless @@quotelist
+      init_testimonials(site) unless @@testimonials
       "<div id=\"quote\"><blockquote>&ldquo;" +
         randomquote(site) +
         "&rdquo;</blockquote></div>"
     end
 
     def randomquote(site)
-      if @@randomquotelist
-        if @@randomquotelist.size == 0
+      if @@randomtestimonials
+        if @@randomtestimonials.size == 0
           refill_quotes
         end
-        idx = rand(@@randomquotelist.size)
-        quote = @@randomquotelist[idx]
-        @@randomquotelist.delete_at(idx)
+        idx = rand(@@randomtestimonials.size)
+        quote = @@randomtestimonials[idx]
+        @@randomtestimonials.delete_at(idx)
         quote
       end
     end
 
     def refill_quotes
-      @@quotelist.each do |pair|
-        @@randomquotelist << pair[1]
+      @@testimonials.each do |pair|
+        @@randomtestimonials << pair[1]
       end
     end
 
   end
 end
 
-Liquid::Template.register_tag('quotation', Jekyll::Quotation)
+Liquid::Template.register_tag('testimonial', Jekyll::Testimonials)
