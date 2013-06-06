@@ -9,15 +9,13 @@ module Jekyll
       self.process(@name)
       self.data = {}
       self.data['title'] = "Portfolio"
-      self.data['layout'] = "default"
-      p dir
-      self.data['submenu'] = CGSite::submenu("/"+dir, pages, "/index.html")
+      self.data['layout'] = "portfolio"
 
-      content = '<ul>'
+      self.data['submenu'] = CGSite::submenu("/"+dir, pages, "/index.html")
+      content = ''
       pages.sort.each do |entry|
-        content << "<li><a href=\"#{entry}\"><img class=\"thumb\" src=\"#{entry}/main.jpg\" />#{CGSite::titlize(entry)}</a></li> "
+        content << "<div class=\"box\"><a href=\"#{entry}\"><img class=\"thumb\" src=\"#{entry}/main.jpg\" /><span class=\"caption simple-caption\"><p>#{CGSite::titlize(entry)}</p></span></a></div> "
       end
-      content << "</ul>"
       self.content = content
     end
 
@@ -43,11 +41,12 @@ module Jekyll
         (!File.directory?(File.join(dir,entry)) && !excludes.include?(entry))
       end
 
-      content = '<li class="active">'
+      content = '<ul class="gallery"><li class="active">'
       content << '<img src="main.jpg" title="" alt="" /></li>'
       imgs.each do |img|
         content << "<li><img src=\"#{img}\" title=\"\" alt=\"\" /></li>"
       end
+      content << '</ul>'
       self.content = content
     end
   end
