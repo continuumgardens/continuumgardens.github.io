@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Mission Statement
+order: 1
 ---
 
 <img src="/images/pic01.jpg" alt="picture 01" />
@@ -9,4 +10,4 @@ Our team is an enthusiastic, knowledgeable and hardworking group with the common
 
 Improving the planet garden by garden!
 
-Call 206.324.1802 or [email](mailto:letitgrow@continuumgardens.com) for References
+Call 206.714.5498 or [email](mailto:continuumgardens@gmail.com) for References

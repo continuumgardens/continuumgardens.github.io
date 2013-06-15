@@ -14,5 +14,5 @@ We collaborate with our clients to find creative, personalized solutions for eve
 <br />
 We look forward to bringing your garden vision to life!
 
-<p><img id="sig" src="/images\sig.png" alt="Rolande Chesebro"  />
-  <em>Owner</em></p>
+<p><img id="sig" src="/images/sig.png" alt="Rolande Chesebro & Reilley Shannon"  />
+  <em>Owners</em></p>

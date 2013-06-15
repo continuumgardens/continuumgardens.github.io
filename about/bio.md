@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Owner Biography
+order: 2
 ---
 
 <img src="/images/rolande.jpg" alt="Rolande Chesebro" />
