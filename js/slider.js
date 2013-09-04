@@ -44,7 +44,7 @@ $(function(){
  $('p.images img').click(function(){
   var newbg=$(this).attr('src').split('bg/bg')[1].split('-thumb')[0];
   $(document.body).css('backgroundImage','url('+_siteRoot+'images/bg/bg'+newbg+'.jpg)');
- 
+
   $(this).parent().find('img').removeClass('on');
   $(this).addClass('on');
   return false;
@@ -57,7 +57,7 @@ $(function(){
     (new Image()).src=_siteRoot+'css/'+this+'/'+css_im;
    });
   });
- }); 
+ });
  $('div.sc-large div.img:has(div.tml)').each(function(){
   $('div.tml',this).hide();
   $(this).append('<a href="#" class="tml_open">&nbsp;</a>').find('a').css({
@@ -65,7 +65,7 @@ $(function(){
   }).click(function(){
    $(this).siblings('div.tml').slideToggle();
    return false;
-  }).focus(function(){this.blur();}); 
+  }).focus(function(){this.blur();});
  });
 });
 var slider={
@@ -111,7 +111,7 @@ var slider={
   var d=slider.data;
   for(var i=0;i<slider.num;i++)
    $('#'+d[i].id).stop().animate({left:((i-pos)*1000)},1000,'swing');
-  
+
   slider.on(pos);
   slider.text(d[pos]);
   slider.cur=pos;
@@ -145,7 +145,7 @@ SI.Files={
  htmlClass:'SI-FILES-STYLIZED',
  fileClass:'file',
  wrapClass:'cabinet',
- 
+
  fini:false,
  able:false,
  init:function(){
@@ -154,7 +154,7 @@ SI.Files={
  stylize:function(elem){
   if(!this.fini){this.init();};
   if(!this.able){return;};
-  
+
   elem.parentNode.file=elem;
   elem.parentNode.onmousemove=function(e){
    if(typeof e=='undefined') e=window.event;
