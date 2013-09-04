@@ -326,6 +326,10 @@ text-align: left;
     box-shadow: 1px 1px 1px 1px #ccc;
 }
 
+#portfolio .box a {
+    text-decoration: none;
+}
+
 #portfolio .box img {
     position: absolute;
     width: 100%;
