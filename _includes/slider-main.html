@@ -1,33 +1,26 @@
-<div id="slide-holder">
-  <div id="slide-runner">
-    <img id="slide-img-1" src="images/slider1.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-2" src="images/slider2.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-3" src="images/slider3.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-4" src="images/slider4.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-5" src="images/slider5.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-6" src="images/slider6.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-7" src="images/slider7.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-8" src="images/slider8.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-9" src="images/slider1.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-10" src="images/slider2.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-11" src="images/slider3.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-12" src="images/slider4.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-13" src="images/slider5.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-14" src="images/slider6.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-15" src="images/slider7.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-16" src="images/slider8.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-17" src="images/slider1.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-18" src="images/slider2.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-19" src="images/slider3.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-20" src="images/slider4.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-21" src="images/slider5.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-22" src="images/slider6.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-23" src="images/slider7.jpg" class="slide" border="0" alt="" />
-    <img id="slide-img-24" src="images/slider8.jpg" class="slide" border="0" alt="" />
-    <!--<div id="slide-controls">
-        <p id="slide-client" class="text"><strong>post: </strong><span></span></p>
-        <p id="slide-desc" class="text"></p>
-        <p id="slide-nav"></p>
-    </div>-->
+<div class="container">
+  <div id="slides">
+    <img src="images/slider1.jpg" alt="" />
+    <img src="images/slider2.jpg" alt="" />
+    <img src="images/slider3.jpg" alt="" />
+    <img src="images/slider4.jpg" alt="" />
+    <img src="images/slider5.jpg" alt="" />
+    <img src="images/slider6.jpg" alt="" />
+    <img src="images/slider7.jpg" alt="" />
+    <img src="images/slider8.jpg" alt="" />
   </div>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/jquery.slides.min.js"></script>
+
+{% raw %}
+<script>
+  $(function() {
+    $('#slides').slidesjs({
+      width: 940,
+      height: 528
+    });
+  });
+</script>
+{% endraw %}
