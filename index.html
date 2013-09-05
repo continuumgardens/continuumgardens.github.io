@@ -8,7 +8,26 @@
           media="all" />
     <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"
           media="all" />
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<!-- force include to work -->
+    <meta name="viewport" content="width=device-width">
+
+<style>
+  /* Prevent the slideshow from flashing on load */
+  #slides {
+  display: none
+  }
+
+  /* Center the slideshow */
+  .container {
+  margin: 0 auto
+  width: 970px;
+  height: 330px;
+  }
+
+</style>
+
     
     <link rel="Shortcut Icon" href="/images/cg.ico" />
   </head>
@@ -34,6 +53,35 @@
     <li><a href="/resources/">Resources</a></li>
   </ul>
 </div>
+<div style="clear:left;" />
+<!-- force include to work --><div class="container">
+  <div id="slides">
+    <img src="/images/slider1.jpg" alt="" />
+    <img src="/images/slider2.jpg" alt="" />
+    <img src="/images/slider3.jpg" alt="" />
+    <img src="/images/slider4.jpg" alt="" />
+    <img src="/images/slider5.jpg" alt="" />
+    <img src="/images/slider6.jpg" alt="" />
+    <img src="/images/slider7.jpg" alt="" />
+    <img src="/images/slider8.jpg" alt="" />
+  </div>
+</div>
+
+<script src="/js/jquery.slides.min.js"></script>
+
+
+<script>
+  $(function() {
+    $('#slides').slidesjs({
+      width: 967,
+      height: 330,
+      navigation: {active: false},
+      pagination: {active: false},
+      play: {active: false, auto: true, pauseOnHover: true}
+    });
+  });
+</script>
+
 
         <div id="content">
           <h3>Imagining a better world garden by garden</h3>
@@ -45,13 +93,13 @@
 <p>We collaborate with our clients to find creative, personalized solutions for every site, style and budget. Large or small, formal or casual, we believe that every garden matters. We value our clients and the contribution a healthy and beautiful garden brings to our families, our communities and our world.</p>
 <br />
 <p>We look forward to bringing your garden vision to life!</p>
-<p><img id='sig' alt='Rolande Chesebro' src='/images/sig.png' />
+<p><img alt='Rolande Chesebro' src='/images/sig.png' id='sig' />
   <em>Owner</em></p>
         </div><!-- end copy -->
         </div><!-- end content -->
         <div id="wrapper-left">
           
-          <div id="quote"><blockquote>&ldquo;Thanks to you and your crew for keeping our garden looking so fantastic. We get so many compliments on our landscaping. I've given your name to several neighbors.&rdquo;</blockquote></div>
+          <div id="quote"><blockquote>&ldquo;WOW! The yard looks great. What wonderful work your team does. We're really excited about the patio. Thanks!&rdquo;</blockquote></div>
         </div><!-- end wrapper-left -->
         <div class="cleaner"></div>
       </div><!-- end wrapper -->
@@ -64,6 +112,9 @@
              target="_blank">Erika Langley</a></p>
       </span>
     </div><!-- end footer -->
+    
+<!-- force include to work -->
+    Included file 'slider-foot.html' not found in _includes directory
     
   </body>
 </html>
