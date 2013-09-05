@@ -8,8 +8,9 @@
           media="all" />
     <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"
           media="all" />
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {% if page.front == true %}
+<!-- force include to work -->
     {% include slider-head.html %}
     {% elsif page.portfolio == true %}
     {% include portfolio-head.html %}
@@ -27,7 +28,7 @@
             our clients to delight in the diversity and beauty of
             nature.&rdquo;</blockquote>
         </div><!-- end header -->
-        {% include menu.html %}{% if page.front == true %}{% include slider-main.html %}{% endif %}
+        {% if page.front == true %}<!-- force include to work -->{% include slider-main.html %}{% endif %}
         <div id="content">
           <h3>{{ page.title }}</h3>
           <div id="copy">
@@ -49,5 +50,9 @@
              target="_blank">Erika Langley</a></p>
       </span>
     </div><!-- end footer -->
+    {% if page.front == true %}
+<!-- force include to work -->
+    {% include slider-foot.html %}
+    {% endif %}
   </body>
 </html>
