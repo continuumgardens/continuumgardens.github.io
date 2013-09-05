@@ -1,0 +1,56 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <meta name="google-site-verification" content="oS_WBb5MBYKsc6EGtFyicLNIkRlCRizb8PD7mnUqYso" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ site.bizname }} - {{ page.title }}</title>
+    <link type="text/css" rel="stylesheet" href="/css/normalize.css"
+          media="all" />
+    <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"
+          media="all" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    {% if page.front %}
+    {% include slider-head.html %}
+    {% elsif page.portfolio == true %}
+    {% include portfolio-head.html %}
+    {% endif %}
+    <link rel="Shortcut Icon" href="/images/cg.ico" />
+  </head>
+  <body>
+    <div id="background">
+      <div id="wrapper">
+        <div id="header">
+          <a id="logolink" href="/">
+            <img id="logo" src="/images/logo.png" alt="{{ site.bizname }}" />
+          </a>
+          <blockquote>&ldquo;Creating unique and vibrant gardens for
+            our clients to delight in the diversity and beauty of
+            nature.&rdquo;</blockquote>
+        </div><!-- end header -->
+        {% include menu.html %}{% if page.front == true %}{% include slider-main.html %}{% endif %}
+        <div id="content">
+          <h3>{{ page.title }}</h3>
+          <div id="copy">
+          {{ content }}
+        </div><!-- end copy -->
+        </div><!-- end content -->
+        <div id="wrapper-left">
+          {% if page.submenu != nil %}{{ page.submenu }}{% else %}{% submenu %}{% endif %}
+          {% testimonial %}
+        </div><!-- end wrapper-left -->
+        <div class="cleaner"></div>
+      </div><!-- end wrapper -->
+    </div><!-- end background -->
+    <div id="footer">
+      <span id="first"><p>Phone: {{ site.phonenum }}</p></span>
+      <span id="photos"><p>&copy;{{ site.copyright }} {{ site.bizname }}.
+          All photography by
+          <a href="http://www.erikalangley.com/"
+             target="_blank">Erika Langley</a></p>
+      </span>
+    </div><!-- end footer -->
+    {% if page.front == true %}
+    {% include slider-foot.html %}
+    {% endif %}
+  </body>
+</html>
