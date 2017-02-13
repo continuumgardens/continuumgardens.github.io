@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Installation &amp; Final Touches
+layout: default
 order: 3
 ---
 

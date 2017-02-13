@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Reuse and Recycle
+layout: default
 order: 1
 ---
 

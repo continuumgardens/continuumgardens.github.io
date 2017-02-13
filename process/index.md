@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Coaching, Consultation &amp; Design
+layout: default
 order: 1
 ---
 

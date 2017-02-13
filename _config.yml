@@ -1,7 +1,15 @@
-
+---
+title: Continuumgardens.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 bizname: Continuum Gardens
 phonenum: 206.714.5498
 url: http://www.continuumgardens.com
 copyright: 2010-2013
-
-destination: ../.deploy
+destination: "../.deploy"

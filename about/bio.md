@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Owner Biography
+layout: default
 order: 2
 ---
 

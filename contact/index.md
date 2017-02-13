@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Contact
+layout: default
 contactname: Reilley Shannon
 contactphone: 206-714-5498
 ---

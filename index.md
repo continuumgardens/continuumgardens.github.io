@@ -1,7 +1,6 @@
 ---
-layout: default
 title: Imagining a better world garden by garden
-
+layout: default
 front: true
 ---
 

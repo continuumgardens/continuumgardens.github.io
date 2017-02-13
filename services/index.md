@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Pillars of Holistic Gardening
+layout: default
 order: 1
 ---
 

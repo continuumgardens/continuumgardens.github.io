@@ -1,6 +1,6 @@
 ---
-layout: default
 title: List of Services
+layout: default
 order: 2
 ---
 

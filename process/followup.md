@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Follow-up Care &amp; Maintenance
+layout: default
 order: 4
 ---
 

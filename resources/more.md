@@ -1,6 +1,6 @@
 ---
-layout: default
 title: More Resources
+layout: default
 order: 3
 ---
 

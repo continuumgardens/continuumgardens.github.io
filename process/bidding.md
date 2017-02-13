@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Bidding &amp; Scheduling
+layout: default
 order: 2
 ---
 

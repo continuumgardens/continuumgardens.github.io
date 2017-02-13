@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Mission Statement
+layout: default
 order: 1
 ---
 

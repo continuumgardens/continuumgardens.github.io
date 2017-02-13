@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Shocking Facts
+layout: default
 order: 2
 ---
 
